@@ -1,0 +1,111 @@
+Letra A
+#include <iostream>
+using namespace std;
+
+// Função para calcular o fatorial
+int calcularFatorial(int num) {
+    if (num == 0 || num == 1) {
+        return 1;
+    } else {
+        return num * calcularFatorial(num - 1);
+    }
+}
+
+int main() {
+    // Solicitação para o usuário digitar o número
+    int numero;
+    cout << "Digite um numero positivo: ";
+    cin >> numero;
+    
+    // Verifica se o número é negativo 
+    if (numero < 0) {
+        cout << "Erro: O fatorial nao pode ser calculado para numeros negativos." << endl;
+        return 1;
+    }
+
+    // Cálculo do fatorial
+    int fatorial = calcularFatorial(numero);
+    
+    // Exibição do resultado
+    cout << "O fatorial de " << numero << " e igual a: " << fatorial << endl;
+    
+    return 0;
+}
+Digite um numero positivo: 5
+O fatorial de 5 e igual a: 120
+
+--------------------------------
+Process exited after 3.072 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
+
+Letra B
+#include <iostream>
+using namespace std;
+
+// Função para calcular o fatorial
+int calcularFatorial(int num) {
+    if (num == 0 || num == 1) {
+        return 1;
+    } else {
+        int fatorial = 1;
+        for (int i = 2; i <= num; ++i) {
+            fatorial *= i;
+        }
+        return fatorial;
+    }
+}
+
+int main() {
+    double e = 1.0;
+
+    // Calcula e usando a série de Taylor até 10 termos
+    for (int n = 1; n <= 10; ++n) {
+        e += static_cast<double>(n) / calcularFatorial(n);
+    }
+
+    cout << "O valor aproximado de e e: " << e << endl;
+
+    return 0;
+}
+    O valor aproximado de e e: 3.71828
+
+--------------------------------
+Process exited after 0.1031 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
+
+Letra C
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Função para calcular o fatorial
+int calcularFatorial(int num) {
+    if (num == 0 || num == 1) {
+        return 1;
+    } else {
+        return num * calcularFatorial(num - 1);
+    }
+}
+
+int main() {
+    double x;
+    cout << "Digite o valor de x para calcular e^x: ";
+    cin >> x;
+
+    double resultado = 0.0;
+
+    // Calcula e^x usando a série de Taylor até 10 termos
+    for (int n = 0; n < 10; ++n) {
+        resultado += pow(x, n) / calcularFatorial(n);
+    }
+
+    cout << "O valor de e^" << x << " é aproximadamente: " << resultado << endl;
+
+    return 0;
+}
+Digite o valor de x para calcular e^x: 5
+O valor de e^5 e aproximadamente: 143.689
+
+--------------------------------
+Process exited after 1.995 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
