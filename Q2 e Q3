@@ -1,0 +1,113 @@
+Q2
+#include <iostream>
+using namespace std;
+
+int main() {
+    int linhas;
+
+    // Padrão A: Triângulo retângulo virado para a direita
+    cout << "Padrao A:\n";
+    for (int i = 1; i <= 5; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Padrão B: Triângulo retângulo de cabeça para cima virado para a esquerda
+    cout << "\nPadrao B:\n";
+    for (int i = 5; i >= 1; --i) {
+        for (int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Padrão C: Triângulo de cabeça para cima retângulo virado para a direita
+    cout << "\nPadrao C:\n";
+    for (int i = 5; i >= 1; --i) {
+        for (int j = 1; j <= 5 - i; ++j) {
+            cout << "  ";
+        }
+        for (int k = 1; k <= i; ++k) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Padrão D: Triângulo retângulo virado para a esquerda
+    cout << "\nPadrao D:\n";
+    for (int i = 1; i <= 5; ++i) {
+        for (int j = 1; j <= 5 - i; ++j) {
+            cout << "  ";
+        }
+        for (int k = 1; k <= i; ++k) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+Padrao A:
+*
+* *
+* * *
+* * * *
+* * * * *
+
+Padrao B:
+* * * * *
+* * * *
+* * *
+* *
+*
+
+Padrao C:
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+
+Padrao D:
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+--------------------------------
+Process exited after 0.8317 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
+
+Q3
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Triplos de Pitágoras com lados não superiores a 20:\n";
+
+    for (int a = 1; a <= 20; ++a) {
+        for (int b = a; b <= 20; ++b) {
+            for (int c = b; c <= 20; ++c) {
+                if (a * a + b * b == c * c) {
+                    cout << "(" << a << ", " << b << ", " << c << ")" << endl;
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+Triplos de Pitagoras com lados nao superiores a 20:
+(3, 4, 5)
+(5, 12, 13)
+(6, 8, 10)
+(8, 15, 17)
+(9, 12, 15)
+(12, 16, 20)
+
+--------------------------------
+Process exited after 0.1023 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
