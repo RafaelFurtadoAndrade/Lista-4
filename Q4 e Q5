@@ -1,0 +1,106 @@
+Q4
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double preco_total = 0.0;
+    int produto;
+    int quantidade;
+
+    cout << "Digite o numero do produto (0 para terminar): ";
+    cin >> produto;
+
+    while (produto != 0) {
+        cout << "Digite a quantidade vendida: ";
+        cin >> quantidade;
+
+        switch (produto) {
+            case 1:
+                preco_total += 2.98 * quantidade;
+                break;
+            case 2:
+                preco_total += 4.50 * quantidade;
+                break;
+            case 3:
+                preco_total += 9.98 * quantidade;
+                break;
+            case 4:
+                preco_total += 4.49 * quantidade;
+                break;
+            case 5:
+                preco_total += 6.87 * quantidade;
+                break;
+            default:
+                cout << "Produto invalido! Por favor, escolha um numero de produto valido." << endl;
+                break;
+        }
+
+        cout << "Digite o numero do proximo produto (0 para terminar): ";
+        cin >> produto;
+    }
+
+    cout << "O valor total de varejo de todos os produtos vendidos e: R$" << preco_total << endl;
+
+    return 0;
+}
+Digite o numero do produto (0 para terminar): 1
+Digite a quantidade vendida: 4
+Digite o numero do proximo produto (0 para terminar): 2
+Digite a quantidade vendida: 5
+Digite o numero do proximo produto (0 para terminar): 3
+Digite a quantidade vendida: 6
+Digite o numero do proximo produto (0 para terminar): 4
+Digite a quantidade vendida: 5
+Digite o numero do proximo produto (0 para terminar): 5
+Digite a quantidade vendida: 5
+Digite o numero do proximo produto (0 para terminar): 0
+O valor total de varejo de todos os produtos vendidos e: R$151.1
+
+Q5
+using namespace std;
+
+int main() {
+    int numeros[5];
+
+    // Lendo os cinco números
+    cout << "Digite cinco numeros entre 1 e 30:" << endl;
+    for (int i = 0; i < 5; ++i) {
+        cout << "Numero " << i + 1 << ": ";
+        cin >> numeros[i];
+
+        // Verificando se o número está dentro do intervalo permitido
+        while (numeros[i] < 1 || numeros[i] > 30) {
+            cout << "Por favor, digite um numero entre 1 e 30: ";
+            cin >> numeros[i];
+        }
+    }
+
+    // Exibindo as barras de asteriscos
+    cout << "Barras de asteriscos:" << endl;
+    for (int i = 0; i < 5; ++i) {
+        cout << numeros[i] << ": ";
+        for (int j = 0; j < numeros[i]; ++j) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+Digite cinco numeros entre 1 e 30:
+Numero 1: 3
+Numero 2: 6
+Numero 3: 7
+Numero 4: 8
+Numero 5: 9
+Barras de asteriscos:
+3: ***
+6: ******
+7: *******
+8: ********
+9: *********
+
+--------------------------------
+Process exited after 19.21 seconds with return value 0
+Pressione qualquer tecla para continuar. . .
